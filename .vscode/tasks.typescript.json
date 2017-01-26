@@ -4,12 +4,7 @@
     "version": "0.1.0",
     "command": "tsc",
     "isShellCommand": true,
-    "showOutput": "always",
-    "suppressTaskName": true,
-    "tasks": [
-        {
-            "taskName": "compile",
-            "args": ["-p", "."]
-        }
-    ]
+    "args": ["-p", "."],
+    "showOutput": "silent",
+    "problemMatcher": "$tsc"
 }
