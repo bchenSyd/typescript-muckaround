@@ -1,6 +1,6 @@
 // tell typescript to put inputModel before this class. vs does that automatically for you
 //             not required in vscode /// <reference path="./inputModel.ts" />
-import {ClassDecorator, MethodDecorator} from './decorators'
+import {ClassDecorator,ClassDecoratorFactory, MethodDecorator} from './decorators'
 
 @ClassDecorator /* when applying class level decorators, target passed into decorator/decorator factory is constructor */
 /* you can refer to the compiled result in lib/app.js
@@ -9,12 +9,14 @@ MyClass = __decorate([
 ], MyClass);
 
  */
+@ClassDecoratorFactory()
 class MyClass {
     //this has been adopted by babel stage 2 :transform-class-properties
     //see:https://babeljs.io/docs/plugins/preset-stage-2/
     //also see: http://www.webpackbin.com/Vys1jFkNf
     private name = "bo chen ";
 
+    static AnotherStaticMethod = undefined; //will populate this via decorator
     @MethodDecorator(true)
     /*
     when apply method decorators, target passed into decorator/decorator factory is prototype 
@@ -24,9 +26,9 @@ __decorate([
 ], MyClass.prototype, "myfunction", null);
      */
     myfunction(){
-
+        console.log('from myfunction...')
     }
-    
+
     get NameGetter(){
         return this.name;
     }
@@ -51,3 +53,4 @@ __decorate([
 MyClass.main();
 var instance = new MyClass()
 console.log(instance.NameGetter)
+MyClass.AnotherStaticMethod()

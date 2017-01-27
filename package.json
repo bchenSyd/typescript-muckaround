@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bochen2014/typescript-muckaround/issues"
   },
-  "homepage": "https://github.com/bochen2014/typescript-muckaround#readme"
+  "homepage": "https://github.com/bochen2014/typescript-muckaround#readme",
+  "dependencies": {
+    "typescript": "^2.1.5"
+  }
 }
