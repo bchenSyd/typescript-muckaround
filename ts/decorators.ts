@@ -9,7 +9,7 @@ export function ClassDecoratorFactory():ClassDecorator {
       debugger
       //target here is construtor , remember that static methods are defined at construtor level!!!!!
       target.AnotherStaticMethod = function(){
-          console.log('injected via decorator...')
+          console.log('target is constructor. you deal with static members here;')
       }
   }
 }
@@ -21,7 +21,7 @@ export function ClassDecoratorFactory():ClassDecorator {
 export function MethodDecorator(value):MethodDecorator {
     return function (target, propertyKey, descriptor: PropertyDescriptor) {
         debugger
-        console.log(`target is Myclass.prototype, propertyKey = ${propertyKey} descriptor is ${JSON.stringify(descriptor)}`)
+        console.log(`target is Myclass.prototype, you deal with prototype members here.propertyKey = ${propertyKey} descriptor is ${JSON.stringify(descriptor)}`)
         descriptor.value(); //we know that descriptor.value is the method we are decorating; so we can call the method here
         descriptor.enumerable = value
     }
