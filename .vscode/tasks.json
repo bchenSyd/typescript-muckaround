@@ -2,26 +2,32 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "cmd",  //on linux, use `sh` instead. if you put `sh` here, which is installed via gitbash, you will have to put your `tsc -p .` into a .sh file and define your task using  "args":['./compile.sh']
-    "isShellCommand": true,
-    "showOutput": "always",
-    "suppressTaskName": true,
-    "args": ["/C"],
     "tasks": [
         {
             "taskName": "compile",
-            "args": ["tsc -p", "."]  //-p /--project , compile a project given a valid configuration file
+            "command": "tsc",
+            "showOutput": "always",
+            "isShellCommand":true,
+            "args": [
+                "-p", //-p /--project , compile a project given a valid configuration file
+                "."
+            ] 
         },
         {
             "taskName": "clean",
+            "command": "sh",
+            "isShellCommand": true,
+            "showOutput": "always",
             "args": [
-                "sh ","./clean.sh" // the only way to run bash command ,e.g. 'ls, touch, rm -rf' is to put them into a file and then run `sh ./file.sh`
+                "-c",  //sh -c 'ls -lt ; cd tmp' 
+                "\"rm -rf lib\""
             ]
         },
         {
             "taskName": "build", //should be run. but run doesn't have a built-in keymapping.  so callit 'build' here. but you know it's `run`!"
+            "command": "node",
             "args": [
-                "node","lib/app.js"
+                "lib/app.js"
             ]
         }
     ]
