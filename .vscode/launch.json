@@ -5,14 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "type": "node2",
             "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceRoot}\\lib\\app.js",  //must be js files!! can't be jsx, ts..
             "cwd": "${workspaceRoot}",
-            "outFiles": [],
             "preLaunchTask": "compile",  //here is the trick. you run compile task, which is defined in tasks.json and tranpile ts to js
-            "sourceMaps": true
+            "sourceMaps": true,
+            "port": 9229
         },
         {
             "type": "node2",
