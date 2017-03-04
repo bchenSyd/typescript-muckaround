@@ -24,6 +24,7 @@
     "typescript": "^2.1.5"
   },
   "devDependencies": {
-    "tslint-eslint-rules": "^3.4.0"
+    "tslint-eslint-rules": "^3.4.0",
+    "tslint-react": "^2.4.0"
   }
 }
