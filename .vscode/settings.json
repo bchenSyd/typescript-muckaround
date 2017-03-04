@@ -1,0 +1,4 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "tslint.enable": true //it's default to true so you don't need this
+}

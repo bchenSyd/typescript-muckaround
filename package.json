@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/bochen2014/typescript-muckaround#readme",
   "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "tslint": "^4.5.1",
     "typescript": "^2.1.5"
+  },
+  "devDependencies": {
+    "tslint-eslint-rules": "^3.4.0"
   }
 }

@@ -5,7 +5,8 @@
         "rootDir": "ts",
         "outDir": "lib",
         "sourceMap": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "jsx": "react"
     },
     "exclude": [
         "node_modules"
