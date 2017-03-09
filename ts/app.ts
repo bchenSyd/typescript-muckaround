@@ -1,6 +1,8 @@
 // tell typescript to put inputModel before this class. vs does that automatically for you
 //             not required in vscode /// <reference path="./inputModel.ts" />
-import {ClassDecorator,ClassDecoratorFactory, MethodDecorator} from './decorators'
+import {ClassDecorator,ClassDecoratorFactory, } from './decorators';
+const MethodDecorator = require('./decorators').MethodDecorator;
+
 
 @ClassDecorator /* when applying class level decorators, target passed into decorator/decorator factory is constructor */
 /* you can refer to the compiled result in lib/app.js
