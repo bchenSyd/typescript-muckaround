@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start":"vs code Ctl+P, >tasks run build",
+    "start2":"1. tsc -p .   to compile ; 2. then node lib/typeAssertion/ to run"
   },
   "repository": {
     "type": "git",

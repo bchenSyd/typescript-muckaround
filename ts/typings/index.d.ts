@@ -9,3 +9,6 @@ interface GlobalFunction2 {
     (para: string): any; //takes one string para, and returns any 
 }
 declare var globalFunction2: GlobalFunction2;
+
+
+
