@@ -23,7 +23,16 @@ export function MethodDecorator(value):MethodDecorator {
         debugger
         console.log(`target is Myclass.prototype, you deal with prototype members here.propertyKey = ${propertyKey} descriptor is ${JSON.stringify(descriptor)}`)
         descriptor.value(); //we know that descriptor.value is the method we are decorating; so we can call the method here
-        descriptor.enumerable = value
+        descriptor.enumerable = value ; // make this method visible from Object.keys 
+        /**
+                function ObjectGetAllProps(obj) {
+                    var ownkey = Object.getOwnPropertyNames(obj);
+                    var proto_key = Object.getOwnPropertyNames(obj.constructor.prototype)
+                    return ownkey.concat(proto_key);
+                }
+         * 
+         */
+
     }
 
 }
