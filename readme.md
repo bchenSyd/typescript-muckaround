@@ -1,3 +1,6 @@
+# run
+`tsc -p .`
+
 # typings
 $typings install redux=https://raw.githubusercontent.com/andrew-w-ross/typings-redux/master/redux.d.ts  --save
 redux
