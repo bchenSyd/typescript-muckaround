@@ -15,18 +15,3 @@ function foo(): Result<number> {
     }
 }
 
-
-
-//frankel 
-const getH2HBetSlipInfo: (any) => IBetSlipH2H = winBetSlip => {
-    // Object.assign can't be used here for 2 reasons
-    // 1. typescript doesn't polyfill it when targeting es5
-    // 2. even when you target es6, you still get an error becuase of typescript bug
-    return {
-        isHead2Head: true,
-        parentMeeting: {},
-        ...winBetSlip
-    }
-}
-
-

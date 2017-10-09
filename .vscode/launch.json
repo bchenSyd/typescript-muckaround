@@ -5,7 +5,8 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node2",
+            "type": "node",
+            "protocol": "inspector",
             "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceRoot}\\lib\\app.js",  //must be js files!! can't be jsx, ts..
@@ -15,7 +16,8 @@
             "port": 9229
         },
         {
-            "type": "node2",
+            "type": "node",
+            "protocol": "inspector",
             "request": "attach",
             "name": "Attach to Process",
             "port": 9229,
