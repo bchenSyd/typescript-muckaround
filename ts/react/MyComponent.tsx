@@ -1,6 +1,8 @@
 
 import * as React from 'react';
-import { Component } from 'react'; 
+// in `flow`, it is called `impor type {IMapStateToprops} from 'react-redux';`
+import { connect, IMapStateToProps } from 'react-redux';
+import { Component } from 'react';
 
 interface IMyComponentProps {
     name: string;
@@ -18,10 +20,15 @@ class MyComponent extends Component<IMyComponentProps, any> {
         return (
             <div>
                 <div></div>
-                <button onClick={()=>{alert('go');}} />
+                <button onClick={() => { alert('go'); }} />
             </div>
         );
     }
 }
 
-export default MyComponent;
+const mapState2Props: IMapStateToProps = state=>{
+    //console.log('typescript, produce an error!')
+    return {};
+}
+
+export default connect()(MyComponent);
