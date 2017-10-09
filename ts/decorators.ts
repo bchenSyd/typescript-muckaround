@@ -8,7 +8,7 @@ export function ClassDecoratorFactory():ClassDecorator {
   return (target)=>{
       debugger
       //target here is construtor , remember that static methods are defined at construtor level!!!!!
-      target.AnotherStaticMethod = function(){
+      (<any>target).AnotherStaticMethod = function(){
           console.log('target is constructor. you deal with static members here;')
       }
   }

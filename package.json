@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
-    "start":"vs code Ctl+P, >tasks run build",
-    "start2":"1. tsc -p .   to compile ; 2. then node lib/typeAssertion/ to run"
+    "start": "tsc -p .",
+    "start2": "node lib/typeAssertion/"
   },
   "repository": {
     "type": "git",
@@ -19,11 +18,13 @@
   },
   "homepage": "https://github.com/bochen2014/typescript-muckaround#readme",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "@types/react": "^16.0.10",
+    "@types/react-dom": "^16.0.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.3",
     "tslint": "^4.5.1",
-    "typescript": "^2.1.5"
+    "typescript": "^2.5.3"
   },
   "devDependencies": {
     "tslint-eslint-rules": "^3.4.0",

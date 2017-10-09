@@ -1,13 +1,15 @@
 # run
 `tsc -p .`
+or
+`tsc ts/react/MyComponent.tsx  --jsx preserve  --outDir dist/react/`
 
 # typings
-$typings install redux=https://raw.githubusercontent.com/andrew-w-ross/typings-redux/master/redux.d.ts  --save
+`$typings install redux=https://raw.githubusercontent.com/andrew-w-ross/typings-redux/master/redux.d.ts  --save`
 redux
 `-- (No dependencies)
 
 
-$ typings install react-redux --save
+`$ typings install react-redux --save`
 typings WARN badlocation "github:andrew-w-ross/typings-redux" is mutable and may change, consider specifying a commit hash
 typings INFO reference Stripped reference "https://raw.githubusercontent.com/andrew-w-ross/typings-react-redux/21202533f75a73d4fa4c50e0357aaf23739fcabb/typings/main.d.ts" d
 uring installation from "react-redux" (main)
