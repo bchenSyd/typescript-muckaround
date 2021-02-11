@@ -26,7 +26,7 @@ class MyComponent extends Component<IMyComponentProps, any> {
     }
 }
 
-const mapState2Props: IMapStateToProps = state=>{
+const mapState2Props: MapStateToProps<any, any> = state=>{
     //console.log('typescript, produce an error!')
     return {};
 }
