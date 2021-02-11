@@ -7,7 +7,7 @@
     "start": "tsc",
     
     "//":"https://www.typescriptlang.org/docs/handbook/project-references.html#build-mode-for-typescript",
-    "compile:class": "tsc -b src/class",
+    "compile:class": "npm run clean &&tsc -b src/class",
 
     "compile:react": "tsc -b src/react",
     "clean": "rm -rf dist &&find src -name '*.js' | xargs rm -rf "
