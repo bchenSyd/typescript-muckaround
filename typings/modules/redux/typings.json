@@ -1,8 +1,0 @@
-{
-  "resolution": "main",
-  "tree": {
-    "src": "https://raw.githubusercontent.com/andrew-w-ross/typings-redux/master/redux.d.ts",
-    "raw": "https://raw.githubusercontent.com/andrew-w-ross/typings-redux/master/redux.d.ts",
-    "typings": "https://raw.githubusercontent.com/andrew-w-ross/typings-redux/master/redux.d.ts"
-  }
-}

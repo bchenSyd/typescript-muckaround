@@ -1,0 +1,3 @@
+interface IPros {
+    name: string
+}

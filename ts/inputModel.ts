@@ -1,3 +1,0 @@
-//script file
-class inputModel{}
-

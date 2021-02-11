@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc -p .",
-    "start2": "node lib/typeAssertion/"
+    "start": "tsc",
+    "clean": "rm -rf dist &&find src -name '*.js' | xargs rm -rf "
   },
   "repository": {
     "type": "git",
@@ -18,16 +18,6 @@
   },
   "homepage": "https://github.com/bochen2014/typescript-muckaround#readme",
   "dependencies": {
-    "@types/react": "^16.0.10",
-    "@types/react-dom": "^16.0.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-redux": "^5.0.3",
-    "tslint": "^4.5.1",
-    "typescript": "^2.5.3"
-  },
-  "devDependencies": {
-    "tslint-eslint-rules": "^3.4.0",
-    "tslint-react": "^2.4.0"
+    "typescript": "^4.1.5"
   }
 }
