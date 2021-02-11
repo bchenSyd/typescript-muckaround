@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc",
-    "compile:class": "cd src/class&&npm start",
+    
+    "//":"https://www.typescriptlang.org/docs/handbook/project-references.html#build-mode-for-typescript",
+    "compile:class": "tsc -b src/class",
+
+    "compile:react": "tsc -b src/react",
     "clean": "rm -rf dist &&find src -name '*.js' | xargs rm -rf "
   },
   "author": "",
@@ -14,5 +18,8 @@
     "@types/react": "^17.0.1",
     "@types/react-redux": "^7.1.16",
     "typescript": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25"
   }
 }
