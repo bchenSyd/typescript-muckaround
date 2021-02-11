@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 // in `flow`, it is called `impor type {IMapStateToprops} from 'react-redux';`
-import { connect, IMapStateToProps } from 'react-redux';
+import { connect, MapStateToProps } from 'react-redux';
 import { Component } from 'react';
 
 interface IMyComponentProps {

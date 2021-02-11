@@ -1,3 +1,3 @@
-export class InputModel2 implements IPros {
+ class InputModel2 implements IPros {
   name: "name";
 }

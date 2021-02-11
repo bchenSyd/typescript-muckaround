@@ -5,19 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc",
+    "compile:class": "cd src/class&&npm start",
     "clean": "rm -rf dist &&find src -name '*.js' | xargs rm -rf "
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bochen2014/typescript-muckaround.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bochen2014/typescript-muckaround/issues"
-  },
-  "homepage": "https://github.com/bochen2014/typescript-muckaround#readme",
   "dependencies": {
+    "@types/react": "^17.0.1",
+    "@types/react-redux": "^7.1.16",
     "typescript": "^4.1.5"
   }
 }
