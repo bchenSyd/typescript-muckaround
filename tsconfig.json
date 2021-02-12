@@ -1,11 +1,12 @@
 {
+  // https://medium.com/jspoint/typescript-compilation-the-typescript-compiler-4cb15f7244bc
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
     "outDir": "./dist",
     "removeComments": true,
     "jsx": "react",
-    "lib": ["ES2015", "dom"],
+    "lib": ["ES2015", "dom"], // it supports JSON5 Specs, so you can use comments, single quote, and more
     "declaration": true
   },
   "include": ["./src/**/*"],

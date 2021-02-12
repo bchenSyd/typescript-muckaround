@@ -1,7 +1,10 @@
 {
-    "extends": "../../tsconfig",
-    "include": [
-        "./**/*"
-    ]
+  "extends": "../../tsconfig",
+  // either specify under compilerOptions
+  //   "compilerOptions": {
+  //     "typeRoots": ["../../types"]
+  //   },
 
+  // or put it under `include`
+  "include": ["./**/*", "../../types/**/*"]
 }
