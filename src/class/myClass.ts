@@ -1,9 +1,6 @@
-import { Agent } from "http";
-
 interface Fish {
-  swim():number;
+  swim(): number;
 }
-
 
 // d.ts output: declare const ross: Person;
 const ross: Person = {
@@ -17,3 +14,9 @@ const ross: Person = {
 //   name: "Gareth J",
 //   age:40
 // }
+
+// declare type setStateFunction<T> = (value: T) => T;
+type setStateFunction<T> = (value: T) => T;
+// declare const TestFunction: setStateFunction<number>;
+const TestFunction: setStateFunction<number> = (val) => val + 1;
+TestFunction(1);
