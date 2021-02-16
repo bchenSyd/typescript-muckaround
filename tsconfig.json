@@ -7,7 +7,8 @@
     "removeComments": true,
     "jsx": "react",
     "lib": ["ES2015", "dom"], // it supports JSON5 Specs, so you can use comments, single quote, and more
-    "declaration": true
+    "declaration": true,
+    "experimentalDecorators": true
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules"]
