@@ -12,6 +12,8 @@ function wizardPageDecoratorFactory() {
 
 @wizardPageDecoratorFactory()
 class App extends React.Component {
+  // this is NOT a class property/field, and is NOT bound by default
+  // (as you wont' call it directly, react will call it by `call(this)` , so it's not your concern)
   componentWillMount() {
     debugger;
   }
