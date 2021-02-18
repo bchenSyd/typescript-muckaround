@@ -8,27 +8,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-function classDecorator(constructor) {
+function ExtendFish(constructor) {
     return class extends constructor {
         constructor() {
             super(...arguments);
-            debugger;
-            this.newProperty = "new property";
-            this.hello = "override";
+            this.food = this.layer + " prawn";
         }
     };
 }
-let Greeter = class Greeter {
-    constructor(m) {
-        this.property = "property";
-        this.hello = m;
+let Fish = class Fish {
+    constructor(name) {
+        this.layer = "bottom";
+        this.name = name;
+    }
+    swim() {
+        console.log('all fish can swim');
     }
 };
-Greeter = __decorate([
-    classDecorator,
+Fish = __decorate([
+    ExtendFish,
     __metadata("design:paramtypes", [String])
-], Greeter);
-
-var instance = new Greeter("world");
+], Fish);
+const yakka = new Fish('yakka');
 debugger;
-console.log(instance);
+console.log(yakka);
+console.log(yakka.__proto__);

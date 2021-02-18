@@ -1,20 +1,22 @@
+function ExtendFish(constructor: typeof Fish) {
+  return class extends constructor {
+    food = this.layer + " prawn";
+  };
+}
 
-function classDecorator<T extends { new (...args: any[]): {} }>(
-    constructor: T
-  ) {
-    return class extends constructor {
-      newProperty = "new property";
-      hello = "override"; // <---------- user specified "world"
-    };
+@ExtendFish
+class Fish {
+  name: string;
+  layer = "bottom";
+  swim() {
+    console.log("all fish can swim");
   }
-  
-  @classDecorator
-  class Greeter {
-    property = "property";
-    hello: string;
-    constructor(m: string) {
-      this.hello = m;
-    }
+  constructor(name: string) {
+    this.name = name;
   }
-  
-  console.log(new Greeter("world"));
+}
+
+const yakka = new Fish("yakka");
+debugger
+console.log(yakka);
+console.log(yakka.__proto__);
