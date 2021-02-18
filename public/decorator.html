@@ -5,8 +5,16 @@
         <pre>
             yakka is an instance of Fish
             Fish is an class object, and has constructor, which has been modified/extended by decorator
-            a new  food  field/property has been added, referring another original field 
-            all fields/properties are defiend at instance level, which is the same as @babel/plugin-transform-class-properties
+
+            Fish class object doesn't hold anything:
+               1. its properties are defined at instance level
+                  this is the same as @babel/plugin-transform-class-properties 
+               2. its methods are defiend in it's prototype
+               3. its static properties are defined somewhere else;
+
+
+            a new food property has been added, referring to another original field 
+       
         </pre>
         <img src="/class%20decorator.png"/>
         <script src="/decorator.js">

@@ -22,14 +22,15 @@ let Fish = class Fish {
         this.name = name;
     }
     swim() {
-        console.log('all fish can swim');
+        console.log("all fish can swim");
     }
 };
+Fish.medium = "water";
 Fish = __decorate([
     ExtendFish,
     __metadata("design:paramtypes", [String])
 ], Fish);
-const yakka = new Fish('yakka');
+const yakka = new Fish("yakka");
 debugger;
 console.log(yakka);
 console.log(yakka.__proto__);

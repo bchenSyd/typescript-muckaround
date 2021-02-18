@@ -8,6 +8,7 @@ function ExtendFish(constructor: typeof Fish) {
 class Fish {
   name: string;
   layer = "bottom";
+  static medium = "water";
   swim() {
     console.log("all fish can swim");
   }
@@ -17,6 +18,5 @@ class Fish {
 }
 
 const yakka = new Fish("yakka");
-debugger
 console.log(yakka);
 console.log(yakka.__proto__);
